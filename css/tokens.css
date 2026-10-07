@@ -1,0 +1,75 @@
+/*
+ * TOKENS DE DESIGN
+ * Todas as cores, fontes e medidas do site saem daqui.
+ * O tema escuro é o padrão (:root); o claro entra com data-tema="claro" no <html>.
+ * Para mudar a identidade, altere --ambar, --verde, --azul, --violeta e os neutros.
+ */
+:root {
+  /* Tipografia */
+  --fonte-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fonte-mono: "IBM Plex Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* Neutros */
+  --fundo: #0b0e13;
+  --texto: #e9edf3;
+  --superficie: #11151c;
+  --superficie-2: #181d26;
+  --texto-suave: #98a2b3;
+  --linha: rgb(233 237 243 / 0.09);
+  --linha-forte: rgb(233 237 243 / 0.18);
+
+  /* Cores de destaque */
+  --ambar: #f2b155;
+  --verde: #5cc8b8;
+  --azul: #7fa8f8;
+  --violeta: #b5a0f5;
+  --sobre-destaque: #1a1204;
+  --erro: #ff8a7a;
+
+  /* As "janelas" de código ficam escuras nos dois temas. */
+  --codigo: #0e1218;
+  --codigo-texto: #e9edf3;
+  --codigo-suave: #8a95a6;
+  --codigo-linha: rgb(233 237 243 / 0.1);
+  --codigo-ambar: #f2b155;
+  --codigo-verde: #5cc8b8;
+  --codigo-azul: #7fa8f8;
+  --codigo-violeta: #b5a0f5;
+
+  /* Cor de destaque da seção atual (projetos = âmbar, cases = verde). */
+  --tom: var(--ambar);
+
+  /* Medidas */
+  --raio: 0.75rem;
+  --raio-grande: 1.05rem;
+  --largura-site: 75rem;
+  --altura-cabecalho: 4rem;
+
+  /* Movimento */
+  --curva-saida: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-tema="claro"] {
+  --fundo: #f5f6f8;
+  --texto: #12161d;
+  --superficie: #ffffff;
+  --superficie-2: #eaedf2;
+  --texto-suave: #556070;
+  --linha: rgb(18 22 29 / 0.1);
+  --linha-forte: rgb(18 22 29 / 0.2);
+
+  --ambar: #a45a00;
+  --verde: #0b7468;
+  --azul: #2b5bd0;
+  --violeta: #6547cc;
+  --sobre-destaque: #ffffff;
+  --erro: #c0392b;
+}
+
+/* Cada área do site pinta os destaques com a própria cor. */
+[data-tom="projeto"] {
+  --tom: var(--ambar);
+}
+[data-tom="case"] {
+  --tom: var(--verde);
+}
