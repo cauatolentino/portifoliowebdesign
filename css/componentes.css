@@ -1,0 +1,55 @@
+/*
+ * COMPONENTES
+ * Peças reaproveitadas entre as páginas.
+ */
+
+/* ----------------------------------- Botão ---------------------------------- */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 150ms var(--curva-saida),
+    color 150ms var(--curva-saida),
+    border-color 150ms var(--curva-saida),
+    transform 150ms var(--curva-saida);
+}
+
+.botao:active {
+  transform: translateY(1px);
+}
+
+.botao:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Preenchido com a cor de destaque da seção. */
+.botao--primario {
+  background: var(--tom);
+  color: var(--sobre-destaque);
+}
+
+.botao--primario:hover {
+  background: color-mix(in oklab, var(--tom), var(--texto) 14%);
+}
+
+/* Só contorno, para a ação secundária. */
+.botao--secundario {
+  border-color: color-mix(in oklab, var(--tom) 55%, transparent);
+  color: var(--tom);
+}
+
+.botao--secundario:hover {
+  background: color-mix(in oklab, var(--tom) 12%, transparent);
+}
