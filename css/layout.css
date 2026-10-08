@@ -100,3 +100,42 @@ main {
     display: block;
   }
 }
+
+/* ------------------------------ Alternar tema ------------------------------- */
+
+/* Controle segmentado sol/lua. O lado ativo é pintado só com CSS. */
+.tema {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.125rem;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  background: var(--superficie);
+}
+
+.tema__botao {
+  display: inline-flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--texto-suave);
+  transition: color 150ms;
+}
+
+.tema__botao:hover {
+  color: var(--texto);
+}
+
+.tema__botao .icone {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+:root:not([data-tema="claro"]) .tema__botao[data-definir-tema="escuro"],
+[data-tema="claro"] .tema__botao[data-definir-tema="claro"] {
+  background: var(--superficie-2);
+  color: var(--texto);
+}

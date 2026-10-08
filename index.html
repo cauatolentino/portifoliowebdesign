@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Aplica o tema antes de desenhar a página. -->
+  <script src="js/tema.js"></script>
 </head>
 <body>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -40,6 +43,14 @@
         </nav>
 
         <div class="cabecalho__acoes">
+          <div class="tema" role="group" aria-label="Tema">
+            <button class="tema__botao" type="button" data-definir-tema="claro" aria-label="Usar tema claro" title="Usar tema claro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+            <button class="tema__botao" type="button" data-definir-tema="escuro" aria-label="Usar tema escuro" title="Usar tema escuro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+          </div>
           <a class="botao botao--primario cabecalho__cta" href="contato.html">Entre em contato</a>
         </div>
       </div>
