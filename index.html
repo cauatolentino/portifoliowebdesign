@@ -77,6 +77,38 @@
   <main id="conteudo">
     <!-- Hero -->
     <section class="hero">
+      <div class="grafico" aria-hidden="true">
+        <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="grafico-area" x1="0" y1="0" x2="0" y2="1">
+              <stop class="grafico__area-cor" offset="0" stop-opacity="0.16" />
+              <stop class="grafico__area-cor" offset="1" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+
+          <!-- Linhas de escala -->
+          <line class="grafico__escala" x1="0" x2="1200" y1="100" y2="100" />
+          <line class="grafico__escala" x1="0" x2="1200" y1="200" y2="200" />
+          <line class="grafico__escala" x1="0" x2="1200" y1="300" y2="300" />
+
+          <!-- Limite de alerta -->
+          <line class="grafico__limite" x1="640" x2="1200" y1="150" y2="150" />
+
+          <!-- Estável, pico no alerta, platô durante a investigação e queda depois da correção -->
+          <path class="grafico__area" d="M0,338 L90,341 L180,336 L270,340 L360,337 L450,341 L540,336 L600,339 L624,332 L655,240 L690,130 L725,78 L780,66 L840,74 L900,60 L940,70 L970,68 L1000,170 L1040,290 L1075,350 L1110,372 L1200,376 L1200,400 L0,400 Z" />
+          <path class="grafico__linha" d="M0,338 L90,341 L180,336 L270,340 L360,337 L450,341 L540,336 L600,339 L624,332 L655,240 L690,130 L725,78 L780,66 L840,74 L900,60 L940,70 L970,68" />
+          <path class="grafico__linha grafico__linha--recuperacao" d="M970,68 L1000,170 L1040,290 L1075,350 L1110,372 L1200,376" />
+        </svg>
+
+        <div class="grafico__rotulos">
+          <span class="grafico__metrica">tempo de resposta (ms)</span>
+          <span class="grafico__nome-limite">limite de alerta</span>
+          <span class="grafico__marco grafico__marco--alerta" style="--x: 52%"><span>09:12:04</span></span>
+          <span class="grafico__marco" style="--x: 80.8%"><span>09:38:47</span></span>
+          <span class="grafico__marco" style="--x: 92.5%"><span>09:44:02</span></span>
+        </div>
+      </div>
+
       <div class="container hero__grade">
         <div>
           <h1 class="hero__titulo">Coloque seu <span>cargo.</span></h1>

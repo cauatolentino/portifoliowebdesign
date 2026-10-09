@@ -141,3 +141,129 @@
     margin-top: 0.875rem;
   }
 }
+
+/* ------------------------------ Gráfico do hero ----------------------------- */
+
+/*
+ * Fundo do hero: o gráfico de monitoramento do incidente que o painel de log
+ * conta. A métrica fica estável, sobe no alerta e cai depois da correção.
+ * Aparece só a partir de 1024px, onde o hero tem duas colunas.
+ */
+.grafico {
+  position: absolute;
+  inset: auto 0 0;
+  display: none;
+  height: 62%;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* O traçado é revelado da esquerda para a direita por um recorte. */
+.grafico svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: grafico-revela 2.4s linear 0.2s both;
+}
+
+.grafico line,
+.grafico path {
+  vector-effect: non-scaling-stroke;
+}
+
+.grafico__escala {
+  stroke: var(--linha);
+  stroke-width: 1;
+}
+
+.grafico__limite {
+  stroke: var(--ambar);
+  stroke-width: 1;
+  stroke-dasharray: 5 6;
+  stroke-opacity: 0.45;
+}
+
+.grafico__area {
+  fill: url(#grafico-area);
+}
+
+.grafico__area-cor {
+  stop-color: var(--ambar);
+}
+
+.grafico__linha {
+  fill: none;
+  stroke: var(--ambar);
+  stroke-width: 1.75;
+  stroke-linejoin: round;
+}
+
+.grafico__linha--recuperacao {
+  stroke: var(--verde);
+}
+
+/* Os rótulos ficam em HTML, posicionados em %, para o texto não esticar com o SVG. */
+.grafico__rotulos {
+  position: absolute;
+  inset: 0;
+  color: var(--texto-suave);
+  font-family: var(--fonte-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.025em;
+  animation: grafico-surge 0.6s 0.4s both;
+}
+
+.grafico__metrica {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 2.5rem;
+}
+
+.grafico__nome-limite {
+  position: absolute;
+  top: 37.5%;
+  right: 2.5rem;
+  padding-bottom: 0.25rem;
+  color: var(--ambar);
+  transform: translateY(-100%);
+}
+
+.grafico__marco {
+  position: absolute;
+  inset-block: 0;
+  left: var(--x);
+  border-left: 1px dashed var(--linha-forte);
+}
+
+.grafico__marco span {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.5rem;
+  color: var(--verde);
+}
+
+.grafico__marco--alerta span {
+  color: var(--ambar);
+}
+
+@keyframes grafico-revela {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes grafico-surge {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .grafico {
+    display: block;
+  }
+}
