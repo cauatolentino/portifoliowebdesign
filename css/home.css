@@ -1,0 +1,143 @@
+/*
+ * HOME
+ * Estilos que só a página inicial usa.
+ */
+
+/* ----------------------------------- Hero ----------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--linha);
+}
+
+.hero__grade {
+  position: relative;
+  display: grid;
+  min-height: min(calc(100svh - var(--altura-cabecalho)), 54rem);
+  align-content: center;
+  align-items: start;
+  gap: 3rem;
+  padding-block: 4rem;
+}
+
+.hero__titulo {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+/* A segunda parte do título vai em mono, na cor de destaque. */
+.hero__titulo span {
+  color: var(--ambar);
+  font-family: var(--fonte-mono);
+  font-size: 0.82em;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.hero__subtitulo {
+  max-width: 36rem;
+  margin-top: 1.5rem;
+  color: var(--texto-suave);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.hero__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* Painel de log: a "assinatura" visual do site, revelada linha a linha. */
+.log {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  font-family: var(--fonte-mono);
+  font-size: 0.8125rem;
+  line-height: 1.625;
+}
+
+.log li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  animation: log-entra 0.35s var(--curva-saida) both;
+  animation-delay: calc(0.35s + var(--i) * 0.45s);
+}
+
+.log__hora {
+  color: var(--codigo-suave);
+}
+
+.log__nivel {
+  font-weight: 600;
+  white-space: pre;
+}
+
+.log__nivel--warn {
+  color: var(--codigo-ambar);
+}
+
+.log__nivel--info {
+  color: var(--codigo-azul);
+}
+
+.log__nivel--fix {
+  color: var(--codigo-violeta);
+}
+
+.log__nivel--done {
+  color: var(--codigo-verde);
+}
+
+.log__rodape {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--codigo-linha);
+  color: var(--codigo-suave);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+}
+
+.log__rodape > span:first-child {
+  color: var(--codigo-ambar);
+}
+
+@keyframes log-entra {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+}
+
+@media (min-width: 40rem) {
+  .hero__titulo {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero__grade {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    padding-block: 6rem;
+  }
+
+  .hero__titulo {
+    font-size: 5rem;
+  }
+
+  .hero__subtitulo {
+    font-size: 1.25rem;
+  }
+
+  /* Compensa o espaço acima das maiúsculas, para o topo do painel bater com o das letras. */
+  .hero__painel {
+    margin-top: 0.875rem;
+  }
+}

@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/componentes.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/home.css">
 
   <!-- Aplica o tema antes de desenhar a página. -->
   <script src="js/tema.js"></script>
@@ -74,6 +75,51 @@
   </header>
 
   <main id="conteudo">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grade">
+        <div>
+          <h1 class="hero__titulo">Coloque seu <span>cargo.</span></h1>
+          <p class="hero__subtitulo">Olá! Me chamo Coloque nome. Use este espaço para contar, em duas ou três linhas, com o que você trabalha, o que constrói e o que a pessoa vai encontrar neste portfólio.</p>
+          <div class="hero__acoes">
+            <a class="botao botao--primario" href="#quem-sou">Quem sou eu <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
+            <a class="botao botao--secundario" href="assets/curriculos/curriculo-pt-br.pdf" target="_blank" rel="noopener noreferrer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> Baixar currículo<span class="so-leitor"> (abre em nova aba)</span></a>
+          </div>
+        </div>
+
+        <div class="hero__painel">
+          <div class="janela">
+            <div class="janela__barra">
+              <p class="janela__titulo"><span>investigacao.log</span></p>
+              <p class="janela__lateral">● resolvido</p>
+            </div>
+            <ol class="log">
+              <li style="--i: 0">
+                <span class="log__hora">09:12:04</span>
+                <span><span class="log__nivel log__nivel--warn">WARN</span> tempo de resposta da listagem acima de 2 s</span>
+              </li>
+              <li style="--i: 1">
+                <span class="log__hora">09:15:31</span>
+                <span><span class="log__nivel log__nivel--info">INFO</span> consulta lenta identificada no log do banco</span>
+              </li>
+              <li style="--i: 2">
+                <span class="log__hora">09:24:10</span>
+                <span><span class="log__nivel log__nivel--info">INFO</span> causa raiz: filtro por data sem índice</span>
+              </li>
+              <li style="--i: 3">
+                <span class="log__hora">09:38:47</span>
+                <span><span class="log__nivel log__nivel--fix">FIX </span> índice criado e consulta reescrita</span>
+              </li>
+              <li style="--i: 4">
+                <span class="log__hora">09:44:02</span>
+                <span><span class="log__nivel log__nivel--done">DONE</span> resposta de volta a 180 ms em produção</span>
+              </li>
+            </ol>
+            <p class="log__rodape"><span>$</span> medir primeiro, corrigir depois <span class="cursor" aria-hidden="true"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="rodape">
