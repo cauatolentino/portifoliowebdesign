@@ -215,3 +215,81 @@ main {
     display: none;
   }
 }
+
+/* ---------------------------------- Rodapé ---------------------------------- */
+
+.rodape {
+  border-top: 1px solid var(--linha);
+  background: var(--superficie);
+}
+
+.rodape__conteudo {
+  padding-block: 4rem;
+}
+
+.rodape__grade {
+  display: grid;
+  gap: 3rem;
+}
+
+.rodape__nome {
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+}
+
+.rodape__cargo {
+  max-width: 18rem;
+  margin-top: 0.5rem;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}
+
+.rodape__colunas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.rodape__colunas h2 {
+  color: var(--ambar);
+}
+
+.rodape__colunas ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 1rem;
+}
+
+.rodape__colunas a {
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  transition: color 150ms;
+}
+
+.rodape__colunas a:hover {
+  color: var(--texto);
+}
+
+.rodape .divisor {
+  margin-top: 3.5rem;
+}
+
+.rodape__direitos {
+  margin-top: 1.5rem;
+  color: var(--texto-suave);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+  .rodape__colunas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .rodape__grade {
+    grid-template-columns: 1.3fr 2fr;
+  }
+}
