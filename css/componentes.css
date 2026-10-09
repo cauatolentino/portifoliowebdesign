@@ -53,3 +53,58 @@
 .botao--secundario:hover {
   background: color-mix(in oklab, var(--tom) 12%, transparent);
 }
+
+/* ---------------------------------- Janela ---------------------------------- */
+
+/*
+ * Moldura de "janela": barra de título com o nome do arquivo e um indicador.
+ * Fica escura nos dois temas, como um editor de código.
+ */
+.janela {
+  overflow: hidden;
+  border: 1px solid var(--codigo-linha);
+  border-radius: var(--raio);
+  background: var(--codigo);
+  color: var(--codigo-texto);
+  box-shadow: 0 24px 60px -30px rgb(0 0 0 / 0.6);
+}
+
+.janela__barra {
+  display: flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--codigo-linha);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+}
+
+.janela__titulo {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--codigo-suave);
+}
+
+.janela__titulo::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--codigo-ambar);
+  content: "";
+}
+
+.janela__titulo span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.janela__lateral {
+  flex-shrink: 0;
+  color: var(--codigo-verde);
+}
