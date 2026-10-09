@@ -139,3 +139,79 @@ main {
   background: var(--superficie-2);
   color: var(--texto);
 }
+
+/* -------------------------------- Menu mobile ------------------------------- */
+
+.menu-botao {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+}
+
+/* O ícone troca entre "menu" e "fechar" conforme o estado do botão. */
+.menu-botao .icone--fechar,
+.menu-botao[aria-expanded="true"] .icone--abrir {
+  display: none;
+}
+
+.menu-botao[aria-expanded="true"] .icone--fechar {
+  display: block;
+}
+
+.menu-mobile {
+  border-top: 1px solid var(--linha);
+  background: var(--fundo);
+}
+
+.menu-mobile ul {
+  display: flex;
+  flex-direction: column;
+  padding-block: 0.75rem;
+}
+
+.menu-mobile__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.menu-mobile__link[aria-current="page"] {
+  color: var(--texto);
+}
+
+.menu-mobile__link .nav__marca {
+  margin-right: 0;
+  opacity: 0;
+}
+
+.menu-mobile__link[aria-current="page"] .nav__marca {
+  opacity: 1;
+}
+
+/* No celular o botão de contato sai da barra e vem para o fim do menu. */
+.menu-mobile__cta {
+  padding: 0.75rem 0 0.5rem;
+}
+
+.menu-mobile__cta .botao {
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+  .menu-mobile__cta {
+    display: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  .menu-botao,
+  .menu-mobile {
+    display: none;
+  }
+}
