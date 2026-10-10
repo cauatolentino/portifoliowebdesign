@@ -374,6 +374,43 @@
         </div>
       </div>
     </section>
+
+    <!-- Quem sou eu -->
+    <section class="secao" id="quem-sou" aria-labelledby="quem-sou-titulo">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <div class="secao__topo">
+            <p class="rotulo secao__categoria">Quem sou eu</p>
+            <a class="botao botao--secundario" href="sobre.html">Minha trajetória completa <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <h2 class="secao__titulo" id="quem-sou-titulo">Prazer, Coloque nome</h2>
+        </div>
+
+        <div class="quem-sou">
+          <div class="quem-sou__texto">
+            <p>Oi! Sou Coloque nome. Use este primeiro parágrafo para dizer quem você é, onde trabalha ou estuda e o que faz hoje.</p>
+            <p>No segundo, conte de onde você veio: como começou na área, por quais funções passou e o que essa trajetória te ensinou.</p>
+            <p>Feche com o que você gosta de fazer fora do trabalho e com o que está estudando no momento.</p>
+          </div>
+
+          <div class="janela" data-revelar>
+            <div class="janela__barra">
+              <p class="janela__titulo"><span>GET /api/eu</span></p>
+              <p class="janela__lateral">200 OK</p>
+            </div>
+            <div class="ficha">
+              <p class="ficha__pontuacao" style="--i: 0">{</p>
+              <p class="ficha__campo" style="--i: 1"><span class="ficha__chave">"nome"</span><span class="ficha__pontuacao">: </span><span class="ficha__valor">"Coloque nome"</span><span class="ficha__pontuacao">,</span></p>
+              <p class="ficha__campo" style="--i: 2"><span class="ficha__chave">"cargo"</span><span class="ficha__pontuacao">: </span><span class="ficha__valor">"Coloque seu cargo"</span><span class="ficha__pontuacao">,</span></p>
+              <p class="ficha__campo" style="--i: 3"><span class="ficha__chave">"empresa"</span><span class="ficha__pontuacao">: </span><span class="ficha__valor">"Coloque sua empresa"</span><span class="ficha__pontuacao">,</span></p>
+              <p class="ficha__campo" style="--i: 4"><span class="ficha__chave">"formacao"</span><span class="ficha__pontuacao">: </span><span class="ficha__valor">"Coloque sua formação"</span><span class="ficha__pontuacao">,</span></p>
+              <p class="ficha__campo" style="--i: 5"><span class="ficha__chave">"status"</span><span class="ficha__pontuacao">: </span><span class="ficha__valor">"aberto a conversas"</span></p>
+              <p class="ficha__pontuacao" style="--i: 6">} <span class="cursor" aria-hidden="true"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="rodape">
