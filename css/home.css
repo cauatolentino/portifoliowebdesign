@@ -315,3 +315,24 @@
 .secao .skills {
   margin-top: 2.5rem;
 }
+
+/* ------------------------------ Projetos e cases ---------------------------- */
+
+/* Grade da home: 1 card grande com capa à esquerda e os demais, só de texto, à direita. */
+.bento,
+.bento__lado {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* A seção de cases ganha um fundo próprio para se separar da de projetos. */
+.secao--faixa {
+  border-block: 1px solid var(--linha);
+  background: color-mix(in srgb, var(--superficie) 50%, transparent);
+}
+
+@media (min-width: 64rem) {
+  .bento {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
