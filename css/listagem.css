@@ -1,0 +1,30 @@
+/*
+ * LISTAGEM
+ * Páginas "Meus projetos" e "Meus cases": contador e grade de cards.
+ */
+
+.listagem {
+  padding-bottom: 6rem;
+}
+
+.listagem__contador {
+  color: var(--texto-suave);
+}
+
+.listagem__grade {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 40rem) {
+  .listagem__grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .listagem__grade {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos · Coloque nome</title>
+  <meta name="description" content="O que eu construí, com o problema, as decisões e o resultado de cada um.">
+  <meta property="og:title" content="Projetos · Coloque nome">
+  <meta property="og:description" content="O que eu construí, com o problema, as decisões e o resultado de cada um.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400..800&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/listagem.css">
+
+  <!-- Aplica o tema antes de desenhar a página. -->
+  <script src="js/tema.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__barra">
+      <a class="logo" href="index.html" aria-label="Ir para a página inicial"><span aria-hidden="true">~/</span>coloque.nome</a>
+
+      <div class="cabecalho__lado">
+        <nav class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Projetos</a></li>
+            <li><a href="cases.html">Cases</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="stack.html">Stack</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="cabecalho__acoes">
+          <div class="tema" role="group" aria-label="Tema">
+            <button class="tema__botao" type="button" data-definir-tema="claro" aria-label="Usar tema claro" title="Usar tema claro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+            <button class="tema__botao" type="button" data-definir-tema="escuro" aria-label="Usar tema escuro" title="Usar tema escuro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+          </div>
+          <a class="botao botao--primario cabecalho__cta" href="contato.html">Entre em contato</a>
+          <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+            <svg class="icone icone--abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+            <svg class="icone icone--fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu-mobile" id="menu-mobile" aria-label="Navegação principal" hidden>
+      <ul class="container">
+        <li><a class="menu-mobile__link" href="index.html"><span class="nav__marca" aria-hidden="true">/</span>Home</a></li>
+        <li><a class="menu-mobile__link" href="projetos.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Projetos</a></li>
+        <li><a class="menu-mobile__link" href="cases.html"><span class="nav__marca" aria-hidden="true">/</span>Cases</a></li>
+        <li><a class="menu-mobile__link" href="sobre.html"><span class="nav__marca" aria-hidden="true">/</span>Sobre</a></li>
+        <li><a class="menu-mobile__link" href="stack.html"><span class="nav__marca" aria-hidden="true">/</span>Stack</a></li>
+        <li><a class="menu-mobile__link" href="contato.html"><span class="nav__marca" aria-hidden="true">/</span>Contato</a></li>
+        <li class="menu-mobile__cta"><a class="botao botao--primario" href="contato.html">Entre em contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div data-tom="projeto">
+      <header class="container pagina__cabecalho">
+        <h1 class="pagina__titulo">Meus projetos</h1>
+        <p class="pagina__subtitulo">O que eu construí, com o problema, as decisões e o resultado de cada um.</p>
+      </header>
+
+      <div class="container listagem">
+        <p class="rotulo listagem__contador">3 projetos encontrados</p>
+
+        <ul class="listagem__grade">
+          <li>
+            <article class="card">
+              <div class="capa" aria-hidden="true">
+                <div class="malha"></div>
+                <p class="capa__caminho"><span>~</span>/projetos/api-de-pedidos</p>
+              </div>
+              <div class="card__corpo">
+                <div class="card__topo">
+                  <h2 class="card__titulo"><a href="projetos/api-de-pedidos.html">Exemplo: API de pedidos</a></h2>
+                  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </div>
+                <p class="card__resumo">Projeto de exemplo. Uma API que centralizou pedidos de 3 canais de venda e cortou o tempo de resposta de 1,8 s para 240 ms.</p>
+                <ul class="tags">
+                  <li class="tag tag--tom">Back-End</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <div class="capa" aria-hidden="true">
+                <div class="malha"></div>
+                <p class="capa__caminho"><span>~</span>/projetos/painel-de-chamados</p>
+              </div>
+              <div class="card__corpo">
+                <div class="card__topo">
+                  <h2 class="card__titulo"><a href="projetos/painel-de-chamados.html">Exemplo: Painel de chamados</a></h2>
+                  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </div>
+                <p class="card__resumo">Projeto de exemplo. Um painel que mostra os chamados por prioridade e reduziu de 5 para 1 o número de telas consultadas pelo suporte.</p>
+                <ul class="tags">
+                  <li class="tag tag--tom">Full Stack</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <div class="capa" aria-hidden="true">
+                <div class="malha"></div>
+                <p class="capa__caminho"><span>~</span>/projetos/portfolio</p>
+              </div>
+              <div class="card__corpo">
+                <div class="card__topo">
+                  <h2 class="card__titulo"><a href="projetos/portfolio.html">Este portfólio</a></h2>
+                  <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </div>
+                <p class="card__resumo">O site que você está vendo: HTML, CSS e JavaScript puros, com tema claro e escuro, componentes reaproveitados e nenhuma dependência.</p>
+                <ul class="tags">
+                  <li class="tag tag--tom">Front-End</li>
+                  <li class="tag">Em construção</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <div class="rodape__grade">
+        <div>
+          <p class="rodape__nome">Coloque nome</p>
+          <p class="rodape__cargo">Coloque seu cargo</p>
+        </div>
+
+        <div class="rodape__colunas">
+          <div>
+            <h2 class="rotulo">Navegar</h2>
+            <ul>
+              <li><a href="projetos.html">Projetos</a></li>
+              <li><a href="cases.html">Cases</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="stack.html">Stack</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Currículos</h2>
+            <ul>
+              <li><a href="assets/curriculos/curriculo-pt-br.pdf" target="_blank" rel="noopener noreferrer">Português (BR)<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="assets/curriculos/resume-en.pdf" target="_blank" rel="noopener noreferrer" lang="en">English<span class="so-leitor" lang="pt-BR"> (abre em nova aba)</span></a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Contatos</h2>
+            <ul>
+              <li><a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="mailto:seuemail@exemplo.com">E-mail</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+      <p class="rodape__direitos">© <span id="ano">2026</span> Coloque nome</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js" defer></script>
+  <script src="js/rodape.js" defer></script>
+  <script src="js/revelar.js" defer></script>
+</body>
+</html>
