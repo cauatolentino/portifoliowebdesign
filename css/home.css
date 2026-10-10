@@ -311,3 +311,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.secao .skills {
+  margin-top: 2.5rem;
+}

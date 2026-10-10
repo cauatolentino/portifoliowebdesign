@@ -256,3 +256,90 @@
     font-size: 4.5rem;
   }
 }
+
+/* ---------------------------------- Skills ---------------------------------- */
+
+/*
+ * Bloco de destaque das skills: hard skills em mono com ">" e soft skills em
+ * sans com "-", lado a lado e separadas por uma linha.
+ */
+.skills {
+  padding: 1.5rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  background: var(--superficie);
+}
+
+.skills__rotulo {
+  margin-bottom: 1.5rem;
+  color: var(--texto-suave);
+}
+
+.skills__grade {
+  display: grid;
+  gap: 2rem;
+}
+
+.skills__titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.skills__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+}
+
+.skills__lista li {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.skills__coluna--hard .skills__titulo {
+  color: var(--ambar);
+  font-family: var(--fonte-mono);
+  font-weight: 600;
+}
+
+.skills__coluna--hard .skills__lista {
+  font-family: var(--fonte-mono);
+  font-size: 0.875rem;
+}
+
+.skills__coluna--hard li::before {
+  color: var(--ambar);
+  content: ">";
+}
+
+.skills__coluna--soft .skills__titulo {
+  color: var(--verde);
+}
+
+.skills__coluna--soft li::before {
+  color: var(--verde);
+  content: "-";
+}
+
+@media (min-width: 40rem) {
+  .skills {
+    padding: 2rem;
+  }
+
+  .skills__grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .skills__coluna--hard {
+    padding-right: 2rem;
+  }
+
+  .skills__coluna--soft {
+    padding-left: 2rem;
+    border-left: 1px solid var(--linha);
+  }
+}
