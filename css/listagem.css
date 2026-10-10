@@ -28,3 +28,38 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ---------------------------------- Filtros --------------------------------- */
+
+/* Filtros em pílula: as categorias vêm do data-categorias de cada card. */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filtros__botao {
+  padding: 0.375rem 0.875rem;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    color 150ms;
+}
+
+.filtros__botao:hover {
+  border-color: var(--linha-forte);
+  color: var(--texto);
+}
+
+.filtros__botao[aria-pressed="true"] {
+  border-color: var(--tom);
+  background: var(--tom);
+  color: var(--sobre-destaque);
+  font-weight: 600;
+}

@@ -81,11 +81,18 @@
         <p class="pagina__subtitulo">O que eu construí, com o problema, as decisões e o resultado de cada um.</p>
       </header>
 
-      <div class="container listagem">
-        <p class="rotulo listagem__contador">3 projetos encontrados</p>
+      <div class="container listagem" data-listagem>
+        <div class="filtros" role="group" aria-label="Filtrar por categoria">
+          <button class="filtros__botao" type="button" data-filtro="" aria-pressed="true">Todos</button>
+          <button class="filtros__botao" type="button" data-filtro="Back-End" aria-pressed="false">Back-End</button>
+          <button class="filtros__botao" type="button" data-filtro="Full Stack" aria-pressed="false">Full Stack</button>
+          <button class="filtros__botao" type="button" data-filtro="Front-End" aria-pressed="false">Front-End</button>
+        </div>
+
+        <p class="rotulo listagem__contador" aria-live="polite" data-singular="# projeto encontrado" data-plural="# projetos encontrados" data-vazio="Nenhum projeto encontrado">3 projetos encontrados</p>
 
         <ul class="listagem__grade">
-          <li>
+          <li data-categorias="Back-End">
             <article class="card">
               <div class="capa" aria-hidden="true">
                 <div class="malha"></div>
@@ -103,7 +110,7 @@
               </div>
             </article>
           </li>
-          <li>
+          <li data-categorias="Full Stack">
             <article class="card">
               <div class="capa" aria-hidden="true">
                 <div class="malha"></div>
@@ -121,7 +128,7 @@
               </div>
             </article>
           </li>
-          <li>
+          <li data-categorias="Front-End">
             <article class="card">
               <div class="capa" aria-hidden="true">
                 <div class="malha"></div>
@@ -192,5 +199,6 @@
   <script src="js/menu.js" defer></script>
   <script src="js/rodape.js" defer></script>
   <script src="js/revelar.js" defer></script>
+  <script src="js/listagem.js" defer></script>
 </body>
 </html>
