@@ -202,3 +202,23 @@ button {
 .pular:focus {
   transform: none;
 }
+
+/* ----------------------------- Entrada ao rolar ----------------------------- */
+
+/*
+ * Elementos com data-revelar entram com fade e um leve deslocamento quando
+ * aparecem na tela (js/revelar.js). A classe .js só existe com JavaScript
+ * ativo, então sem ele o conteúdo fica visível normalmente.
+ */
+.js [data-revelar] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s var(--curva-saida),
+    transform 0.5s var(--curva-saida);
+}
+
+.js [data-revelar].visivel {
+  opacity: 1;
+  transform: none;
+}
