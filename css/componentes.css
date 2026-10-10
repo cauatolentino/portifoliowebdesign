@@ -108,3 +108,151 @@
   flex-shrink: 0;
   color: var(--codigo-verde);
 }
+
+/* ------------------------------------ Tag ----------------------------------- */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  background: var(--superficie-2);
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+/* Usa a cor de destaque da seção: categorias de projetos e cases. */
+.tag--tom {
+  border-color: color-mix(in oklab, var(--tom) 40%, transparent);
+  background: color-mix(in oklab, var(--tom) 10%, transparent);
+  color: var(--tom);
+}
+
+/* Em mono, para nomes de tecnologias. */
+.tag--mono {
+  color: var(--texto);
+  font-family: var(--fonte-mono);
+  font-size: 0.7rem;
+}
+
+/* ----------------------------------- Seção ---------------------------------- */
+
+/*
+ * Seção da home: categoria em mono com (opcional) um botão na mesma linha,
+ * à direita, levando à página completa; o título vem logo abaixo.
+ */
+.secao {
+  padding-block: 5rem;
+}
+
+.secao__cabecalho {
+  margin-bottom: 2.5rem;
+}
+
+.secao__topo {
+  display: flex;
+  min-height: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.secao__categoria {
+  color: var(--tom);
+}
+
+.secao__titulo {
+  max-width: 42rem;
+  margin-top: 1rem;
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.secao__descricao {
+  max-width: 42rem;
+  margin-top: 0.75rem;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 40rem) {
+  .secao {
+    padding-block: 6rem;
+  }
+
+  .secao__titulo {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .secao {
+    padding-block: 7rem;
+  }
+
+  .secao__cabecalho {
+    margin-bottom: 3rem;
+  }
+
+  .secao__titulo {
+    font-size: 3rem;
+    line-height: 1.05;
+  }
+
+  .secao__descricao {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Cabeçalho das páginas internas: H1 grande à esquerda e uma linha de subtítulo. */
+.pagina__cabecalho {
+  padding-block: 3.5rem 2.5rem;
+}
+
+.pagina__titulo {
+  max-width: 56rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.pagina__subtitulo {
+  max-width: 42rem;
+  margin-top: 1.25rem;
+  color: var(--texto-suave);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 40rem) {
+  .pagina__cabecalho {
+    padding-top: 5rem;
+  }
+
+  .pagina__titulo {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .pagina__cabecalho {
+    padding-bottom: 3rem;
+  }
+
+  .pagina__titulo {
+    font-size: 4.5rem;
+  }
+}
