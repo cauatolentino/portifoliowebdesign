@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exemplo: O relatório que levava 9 minutos · Coloque nome</title>
+  <meta name="description" content="Case de exemplo. Um relatório mensal levava 9 minutos para abrir e passou a abrir em 12 segundos, sem trocar de tecnologia.">
+  <meta property="og:title" content="Exemplo: O relatório que levava 9 minutos · Coloque nome">
+  <meta property="og:description" content="Case de exemplo. Um relatório mensal levava 9 minutos para abrir e passou a abrir em 12 segundos, sem trocar de tecnologia.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400..800&display=swap">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/entrada.css">
+
+  <!-- Aplica o tema antes de desenhar a página. -->
+  <script src="../js/tema.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__barra">
+      <a class="logo" href="../index.html" aria-label="Ir para a página inicial"><span aria-hidden="true">~/</span>coloque.nome</a>
+
+      <div class="cabecalho__lado">
+        <nav class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projetos.html">Projetos</a></li>
+            <li><a href="../cases.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Cases</a></li>
+            <li><a href="../sobre.html">Sobre</a></li>
+            <li><a href="../stack.html">Stack</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="cabecalho__acoes">
+          <div class="tema" role="group" aria-label="Tema">
+            <button class="tema__botao" type="button" data-definir-tema="claro" aria-label="Usar tema claro" title="Usar tema claro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+            <button class="tema__botao" type="button" data-definir-tema="escuro" aria-label="Usar tema escuro" title="Usar tema escuro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+          </div>
+          <a class="botao botao--primario cabecalho__cta" href="../contato.html">Entre em contato</a>
+          <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+            <svg class="icone icone--abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+            <svg class="icone icone--fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu-mobile" id="menu-mobile" aria-label="Navegação principal" hidden>
+      <ul class="container">
+        <li><a class="menu-mobile__link" href="../index.html"><span class="nav__marca" aria-hidden="true">/</span>Home</a></li>
+        <li><a class="menu-mobile__link" href="../projetos.html"><span class="nav__marca" aria-hidden="true">/</span>Projetos</a></li>
+        <li><a class="menu-mobile__link" href="../cases.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Cases</a></li>
+        <li><a class="menu-mobile__link" href="../sobre.html"><span class="nav__marca" aria-hidden="true">/</span>Sobre</a></li>
+        <li><a class="menu-mobile__link" href="../stack.html"><span class="nav__marca" aria-hidden="true">/</span>Stack</a></li>
+        <li><a class="menu-mobile__link" href="../contato.html"><span class="nav__marca" aria-hidden="true">/</span>Contato</a></li>
+        <li class="menu-mobile__cta"><a class="botao botao--primario" href="../contato.html">Entre em contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <article data-tom="case">
+      <header class="container entrada__cabecalho">
+        <a class="rotulo entrada__voltar" href="../cases.html"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg> Todos os cases</a>
+
+        <ul class="tags">
+          <li class="tag tag--tom">Desempenho</li>
+        </ul>
+
+        <h1 class="entrada__titulo">Exemplo: O relatório que levava 9 minutos</h1>
+        <p class="entrada__resumo">Case de exemplo. Um relatório mensal levava 9 minutos para abrir e passou a abrir em 12 segundos, sem trocar de tecnologia.</p>
+
+        <dl class="metadados">
+          <div>
+            <dt class="rotulo">Papel</dt>
+            <dd>Desenvolvedor</dd>
+          </div>
+          <div>
+            <dt class="rotulo">Contexto</dt>
+            <dd>Empresa do setor financeiro</dd>
+          </div>
+          <div>
+            <dt class="rotulo">Time</dt>
+            <dd>Eu e 1 analista de negócio</dd>
+          </div>
+          <div>
+            <dt class="rotulo">Período</dt>
+            <dd>2025</dd>
+          </div>
+        </dl>
+        <p class="entrada__aviso"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="m2 2 20 20"/></svg> Case anonimizado: nomes de empresa, cliente e pessoas foram omitidos ou trocados.</p>
+
+        <div class="capa" aria-hidden="true">
+          <div class="malha"></div>
+          <p class="capa__caminho"><span>~</span>/cases/relatorio-lento</p>
+        </div>
+      </header>
+
+      <div class="container entrada__corpo">
+        <aside>
+          <nav class="indice" aria-label="Nesta página">
+            <p class="rotulo">Nesta página</p>
+            <ol>
+              <li><a href="#situacao" aria-current="location"><span class="indice__numero">01</span>Situação</a></li>
+              <li><a href="#investigacao"><span class="indice__numero">02</span>Investigação</a></li>
+              <li><a href="#solucao"><span class="indice__numero">03</span>Solução</a></li>
+              <li><a href="#resultado"><span class="indice__numero">04</span>Resultado</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <div class="prosa">
+          <section class="capitulo" id="situacao">
+            <p class="rotulo capitulo__rotulo">01. Situação</p>
+            <h2>Nove minutos para abrir um relatório<a class="ancora" href="#situacao" aria-hidden="true" tabindex="-1">#</a></h2>
+            <p>Este é um <strong>case de exemplo</strong>. Descreva a situação e quem era afetado.</p>
+          </section>
+
+          <section class="capitulo" id="investigacao">
+            <p class="rotulo capitulo__rotulo">02. Investigação</p>
+            <h2>A mesma consulta rodava uma vez por linha<a class="ancora" href="#investigacao" aria-hidden="true" tabindex="-1">#</a></h2>
+            <p>Conte como você chegou à causa: o que mediu, o que descartou e o que confirmou.</p>
+          </section>
+
+          <section class="capitulo" id="solucao">
+            <p class="rotulo capitulo__rotulo">03. Solução</p>
+            <h2>Uma consulta no lugar de mil<a class="ancora" href="#solucao" aria-hidden="true" tabindex="-1">#</a></h2>
+            <div class="decisoes">
+              <div class="decisao">
+                <p class="rotulo">Escolha</p>
+                <h3>Agrupar no banco, não na aplicação</h3>
+                <p>O banco faz em uma consulta o que a aplicação fazia em um laço.</p>
+              </div>
+              <div class="decisao">
+                <p class="rotulo">Cuidado</p>
+                <h3>Comparar o resultado antigo e o novo</h3>
+                <p>Os dois relatórios rodaram lado a lado por um mês antes da troca.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="capitulo" id="resultado">
+            <p class="rotulo capitulo__rotulo">04. Resultado</p>
+            <h2>De 9 minutos para 12 segundos<a class="ancora" href="#resultado" aria-hidden="true" tabindex="-1">#</a></h2>
+            <dl class="metricas">
+              <div>
+                <dt>para abrir o relatório</dt>
+                <dd>12 s</dd>
+              </div>
+              <div>
+                <dt>mais rápido</dt>
+                <dd>45x</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+      </div>
+
+      <div class="proximo">
+        <a class="container" href="integracao-instavel.html">
+          <span>
+            <span class="rotulo">Próximo case</span>
+            <span class="proximo__titulo">Exemplo: A integração que falhava em silêncio</span>
+          </span>
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <div class="rodape__grade">
+        <div>
+          <p class="rodape__nome">Coloque nome</p>
+          <p class="rodape__cargo">Coloque seu cargo</p>
+        </div>
+
+        <div class="rodape__colunas">
+          <div>
+            <h2 class="rotulo">Navegar</h2>
+            <ul>
+              <li><a href="../projetos.html">Projetos</a></li>
+              <li><a href="../cases.html">Cases</a></li>
+              <li><a href="../sobre.html">Sobre</a></li>
+              <li><a href="../stack.html">Stack</a></li>
+              <li><a href="../contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Currículos</h2>
+            <ul>
+              <li><a href="../assets/curriculos/curriculo-pt-br.pdf" target="_blank" rel="noopener noreferrer">Português (BR)<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="../assets/curriculos/resume-en.pdf" target="_blank" rel="noopener noreferrer" lang="en">English<span class="so-leitor" lang="pt-BR"> (abre em nova aba)</span></a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Contatos</h2>
+            <ul>
+              <li><a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="mailto:seuemail@exemplo.com">E-mail</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+      <p class="rodape__direitos">© <span id="ano">2026</span> Coloque nome</p>
+    </div>
+  </footer>
+
+  <script src="../js/menu.js" defer></script>
+  <script src="../js/rodape.js" defer></script>
+  <script src="../js/revelar.js" defer></script>
+  <script src="../js/indice.js" defer></script>
+</body>
+</html>
