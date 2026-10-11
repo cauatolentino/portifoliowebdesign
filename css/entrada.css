@@ -515,3 +515,73 @@
     top: 6rem;
   }
 }
+
+/* ----------------------------------- Abas ----------------------------------- */
+
+/* Abas de texto (antes/depois, hipóteses) e de arquivos dentro da janela de código. */
+.abas {
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  background: var(--superficie);
+}
+
+.abas__lista {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  padding-inline: 0.75rem;
+  border-bottom: 1px solid var(--linha);
+}
+
+.abas__aba {
+  flex: none;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid transparent;
+  color: var(--texto-suave);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: color 150ms;
+}
+
+.abas__aba:hover,
+.abas__aba[aria-selected="true"] {
+  color: var(--texto);
+}
+
+.abas__aba[aria-selected="true"] {
+  border-color: var(--tom);
+}
+
+.abas__painel {
+  padding: 1.25rem;
+}
+
+/* Dentro da janela de código as abas herdam o fundo escuro. */
+.janela .abas {
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.janela .abas__lista {
+  border-color: var(--codigo-linha);
+}
+
+.janela .abas__aba {
+  color: var(--codigo-suave);
+}
+
+.janela .abas__aba:hover,
+.janela .abas__aba[aria-selected="true"] {
+  color: var(--codigo-texto);
+}
+
+.janela .abas__aba[aria-selected="true"] {
+  border-color: var(--codigo-ambar);
+}
+
+.janela .abas__painel {
+  padding: 0;
+}
