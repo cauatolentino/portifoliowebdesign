@@ -456,3 +456,62 @@
     height: 2.5rem;
   }
 }
+
+/* ---------------------------------- Índice ---------------------------------- */
+
+/* Índice "Nesta página": numerado, fixo ao rolar e com destaque do capítulo atual. */
+.indice .rotulo {
+  color: var(--texto-suave);
+}
+
+.indice ol {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-left: 1px solid var(--linha);
+}
+
+.indice a {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: -1px;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 2px solid transparent;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition:
+    border-color 150ms,
+    color 150ms;
+}
+
+.indice a:hover {
+  color: var(--texto);
+}
+
+.indice__numero {
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+}
+
+.indice a[aria-current="location"] {
+  border-color: var(--tom);
+  color: var(--texto);
+}
+
+.indice a[aria-current="location"] .indice__numero {
+  color: var(--tom);
+}
+
+/* A partir de 1024px o índice vira uma coluna à esquerda do texto. */
+@media (min-width: 64rem) {
+  .entrada__corpo {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 5rem;
+  }
+
+  .indice {
+    position: sticky;
+    top: 6rem;
+  }
+}
