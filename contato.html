@@ -114,10 +114,12 @@
             <div class="campo">
               <label for="nome">Nome</label>
               <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como posso te chamar?" required>
+              <p class="campo__erro" id="nome-erro" role="alert" hidden></p>
             </div>
             <div class="campo">
               <label for="email">E-mail</label>
               <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+              <p class="campo__erro" id="email-erro" role="alert" hidden></p>
             </div>
           </div>
 
@@ -130,16 +132,19 @@
               <option value="duvida">Dúvida sobre um projeto ou case</option>
               <option value="outro">Outro assunto</option>
             </select>
+            <p class="campo__erro" id="assunto-erro" role="alert" hidden></p>
           </div>
 
           <div class="campo">
             <label for="link">Link <span>(opcional)</span></label>
             <input id="link" name="link" type="url" inputmode="url" placeholder="https://">
+            <p class="campo__erro" id="link-erro" role="alert" hidden></p>
           </div>
 
           <div class="campo">
             <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" name="mensagem" rows="6" placeholder="Conte um pouco do contexto" required></textarea>
+            <p class="campo__erro" id="mensagem-erro" role="alert" hidden></p>
           </div>
 
           <!-- Honeypot: pessoas não veem este campo, só robôs o preenchem. -->
@@ -205,5 +210,6 @@
   <script src="js/menu.js" defer></script>
   <script src="js/rodape.js" defer></script>
   <script src="js/revelar.js" defer></script>
+  <script src="js/contato.js" defer></script>
 </body>
 </html>
