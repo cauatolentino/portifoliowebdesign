@@ -104,6 +104,57 @@
           </div>
         </dl>
       </section>
+
+      <section class="contato__formulario" aria-labelledby="formulario">
+        <h2 class="rotulo" id="formulario">Mande uma mensagem</h2>
+
+        <!-- Sem JavaScript, o envio cai no aplicativo de e-mail pelo próprio action. -->
+        <form class="formulario" action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain" data-destino="seuemail@exemplo.com" novalidate>
+          <div class="formulario__linha">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como posso te chamar?" required>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" required>
+              <option value="" selected disabled>Selecione um assunto</option>
+              <option value="vaga">Oportunidade de trabalho</option>
+              <option value="projeto">Projeto ou freelance</option>
+              <option value="duvida">Dúvida sobre um projeto ou case</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="link">Link <span>(opcional)</span></label>
+            <input id="link" name="link" type="url" inputmode="url" placeholder="https://">
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Conte um pouco do contexto" required></textarea>
+          </div>
+
+          <!-- Honeypot: pessoas não veem este campo, só robôs o preenchem. -->
+          <div class="formulario__armadilha" aria-hidden="true">
+            <label>Site <input type="text" name="site" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <p class="formulario__privacidade">Seus dados são usados só para eu te responder.</p>
+
+          <div class="formulario__rodape">
+            <button class="botao botao--primario" type="submit"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg> Enviar mensagem</button>
+            <p class="formulario__resultado" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
     </div>
   </main>
 

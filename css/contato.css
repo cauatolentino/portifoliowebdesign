@@ -70,3 +70,149 @@
 .canais a:hover .icone {
   color: var(--ambar);
 }
+
+/* -------------------------------- Formulário -------------------------------- */
+
+.contato__formulario {
+  padding: 1.5rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  background: var(--superficie);
+}
+
+.contato__formulario h2 {
+  margin-bottom: 1.5rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formulario__linha {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.campo label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.campo label span {
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding-inline: 0.875rem;
+  border: 1px solid var(--linha-forte);
+  border-radius: 0.5rem;
+  background: var(--fundo);
+  font-size: 1rem;
+  transition:
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.campo input,
+.campo select {
+  height: 2.75rem;
+}
+
+.campo textarea {
+  min-height: 9rem;
+  padding-block: 0.75rem;
+  resize: vertical;
+}
+
+.campo ::placeholder {
+  color: var(--texto-suave);
+  opacity: 1;
+}
+
+/* Enquanto nenhum assunto foi escolhido, o select mostra o texto como placeholder. */
+.campo select:invalid {
+  color: var(--texto-suave);
+}
+
+.campo select option {
+  color: var(--texto);
+}
+
+.campo :is(input, select, textarea):focus-visible {
+  border-color: var(--ambar);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--ambar) 30%, transparent);
+}
+
+.campo [aria-invalid="true"] {
+  border-color: var(--erro);
+}
+
+.campo__erro {
+  color: var(--erro);
+  font-size: 0.875rem;
+}
+
+/* Honeypot: fora da tela, fora da ordem de tabulação e do leitor de tela. */
+.formulario__armadilha {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.formulario__privacidade {
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+}
+
+.formulario__rodape {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formulario__resultado {
+  font-size: 0.875rem;
+}
+
+.formulario__resultado[data-estado="sucesso"] {
+  color: var(--verde);
+}
+
+.formulario__resultado[data-estado="erro"] {
+  color: var(--erro);
+}
+
+@media (min-width: 40rem) {
+  .contato__formulario {
+    padding: 2rem;
+  }
+
+  .formulario__linha {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48rem) {
+  .campo input,
+  .campo select,
+  .campo textarea {
+    font-size: 0.9375rem;
+  }
+}
