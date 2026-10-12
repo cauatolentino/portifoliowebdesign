@@ -124,3 +124,157 @@
     flex-direction: column;
   }
 }
+
+/* ---------------------------------- Seções ---------------------------------- */
+
+.sobre__secao {
+  padding-block: 3.5rem;
+  border-top: 1px solid var(--linha);
+}
+
+.sobre__secao:last-child {
+  padding-bottom: 0;
+}
+
+.sobre__descricao {
+  max-width: 36rem;
+  margin-top: 0.75rem;
+  color: var(--texto-suave);
+}
+
+.sobre__secao .skills {
+  margin-top: 2rem;
+}
+
+/* -------------------------------- Experiência ------------------------------- */
+
+.experiencias {
+  margin-top: 2rem;
+}
+
+.experiencias > li {
+  padding-block: 2rem;
+}
+
+.experiencias > li:first-child {
+  padding-top: 0;
+}
+
+.experiencias > li + li {
+  border-top: 1px solid var(--linha);
+}
+
+.experiencia {
+  display: grid;
+  gap: 1rem;
+}
+
+.experiencia__periodo {
+  font-family: var(--fonte-mono);
+  font-size: 0.875rem;
+}
+
+.experiencia__periodo p + p {
+  margin-top: 0.25rem;
+  color: var(--texto-suave);
+}
+
+.experiencia__cargo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: -0.025em;
+}
+
+.experiencia__empresa {
+  margin-top: 0.25rem;
+  color: var(--ambar);
+}
+
+.experiencia__resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: var(--texto-suave);
+  font-size: 0.9375rem;
+  line-height: 1.625;
+}
+
+.experiencia__resultados li {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.experiencia__resultados li::before {
+  color: var(--ambar);
+  font-family: var(--fonte-mono);
+  content: "›";
+}
+
+.experiencia .tags {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 64rem) {
+  .experiencia {
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: 4rem;
+  }
+}
+
+/* --------------------------------- Formação --------------------------------- */
+
+.formacoes {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.formacao {
+  padding: 1.5rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  background: var(--superficie);
+}
+
+.formacao__topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.formacao__periodo {
+  color: var(--texto-suave);
+  font-family: var(--fonte-mono);
+  font-size: 0.75rem;
+}
+
+.formacao__curso {
+  margin-top: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: -0.025em;
+}
+
+.formacao__instituicao {
+  margin-top: 0.25rem;
+  color: var(--ambar);
+  font-size: 0.875rem;
+}
+
+.formacao__descricao {
+  margin-top: 0.75rem;
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 40rem) {
+  .formacoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
