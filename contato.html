@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato · Coloque nome</title>
+  <meta name="description" content="Uma vaga, um projeto ou só uma troca de ideia: escolha o canal que preferir ou mande uma mensagem.">
+  <meta property="og:title" content="Contato · Coloque nome">
+  <meta property="og:description" content="Uma vaga, um projeto ou só uma troca de ideia: escolha o canal que preferir ou mande uma mensagem.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400..800&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/contato.css">
+
+  <!-- Aplica o tema antes de desenhar a página. -->
+  <script src="js/tema.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__barra">
+      <a class="logo" href="index.html" aria-label="Ir para a página inicial"><span aria-hidden="true">~/</span>coloque.nome</a>
+
+      <div class="cabecalho__lado">
+        <nav class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cases.html">Cases</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="stack.html">Stack</a></li>
+            <li><a href="contato.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="cabecalho__acoes">
+          <div class="tema" role="group" aria-label="Tema">
+            <button class="tema__botao" type="button" data-definir-tema="claro" aria-label="Usar tema claro" title="Usar tema claro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+            <button class="tema__botao" type="button" data-definir-tema="escuro" aria-label="Usar tema escuro" title="Usar tema escuro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+          </div>
+          <a class="botao botao--primario cabecalho__cta" href="contato.html">Entre em contato</a>
+          <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+            <svg class="icone icone--abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+            <svg class="icone icone--fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu-mobile" id="menu-mobile" aria-label="Navegação principal" hidden>
+      <ul class="container">
+        <li><a class="menu-mobile__link" href="index.html"><span class="nav__marca" aria-hidden="true">/</span>Home</a></li>
+        <li><a class="menu-mobile__link" href="projetos.html"><span class="nav__marca" aria-hidden="true">/</span>Projetos</a></li>
+        <li><a class="menu-mobile__link" href="cases.html"><span class="nav__marca" aria-hidden="true">/</span>Cases</a></li>
+        <li><a class="menu-mobile__link" href="sobre.html"><span class="nav__marca" aria-hidden="true">/</span>Sobre</a></li>
+        <li><a class="menu-mobile__link" href="stack.html"><span class="nav__marca" aria-hidden="true">/</span>Stack</a></li>
+        <li><a class="menu-mobile__link" href="contato.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Contato</a></li>
+        <li class="menu-mobile__cta"><a class="botao botao--primario" href="contato.html">Entre em contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <header class="container pagina__cabecalho">
+      <h1 class="pagina__titulo">Vamos conversar</h1>
+      <p class="pagina__subtitulo">Uma vaga, um projeto ou só uma troca de ideia: escolha o canal que preferir ou mande uma mensagem.</p>
+    </header>
+
+    <div class="container contato">
+      <section aria-labelledby="canais">
+        <h2 class="rotulo" id="canais">Canais diretos</h2>
+        <dl class="canais">
+          <div>
+            <dt class="rotulo">GitHub</dt>
+            <dd>
+              <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer"><span>github.com/seu-usuario</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg><span class="so-leitor"> (abre em nova aba)</span></a>
+            </dd>
+          </div>
+          <div>
+            <dt class="rotulo">LinkedIn</dt>
+            <dd>
+              <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer"><span>linkedin.com/in/seu-usuario</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg><span class="so-leitor"> (abre em nova aba)</span></a>
+            </dd>
+          </div>
+          <div>
+            <dt class="rotulo">E-mail</dt>
+            <dd>
+              <a href="mailto:seuemail@exemplo.com"><span>seuemail@exemplo.com</span><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <div class="rodape__grade">
+        <div>
+          <p class="rodape__nome">Coloque nome</p>
+          <p class="rodape__cargo">Coloque seu cargo</p>
+        </div>
+
+        <div class="rodape__colunas">
+          <div>
+            <h2 class="rotulo">Navegar</h2>
+            <ul>
+              <li><a href="projetos.html">Projetos</a></li>
+              <li><a href="cases.html">Cases</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="stack.html">Stack</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Currículos</h2>
+            <ul>
+              <li><a href="assets/curriculos/curriculo-pt-br.pdf" target="_blank" rel="noopener noreferrer">Português (BR)<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="assets/curriculos/resume-en.pdf" target="_blank" rel="noopener noreferrer" lang="en">English<span class="so-leitor" lang="pt-BR"> (abre em nova aba)</span></a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Contatos</h2>
+            <ul>
+              <li><a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="mailto:seuemail@exemplo.com">E-mail</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+      <p class="rodape__direitos">© <span id="ano">2026</span> Coloque nome</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js" defer></script>
+  <script src="js/rodape.js" defer></script>
+  <script src="js/revelar.js" defer></script>
+</body>
+</html>

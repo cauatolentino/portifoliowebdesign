@@ -1,0 +1,72 @@
+/*
+ * CONTATO
+ * Canais diretos à esquerda e formulário à direita.
+ */
+
+.contato {
+  display: grid;
+  gap: 3rem;
+  padding-bottom: 6rem;
+}
+
+.contato h2 {
+  color: var(--ambar);
+}
+
+@media (min-width: 64rem) {
+  .contato {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: 4rem;
+  }
+}
+
+/* ---------------------------------- Canais ---------------------------------- */
+
+.canais {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--linha);
+}
+
+.canais > div {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--linha);
+}
+
+.canais dt {
+  color: var(--texto-suave);
+}
+
+.canais dd {
+  min-width: 0;
+}
+
+.canais a {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.9375rem;
+  transition: color 150ms;
+}
+
+.canais a > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.canais .icone {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--texto-suave);
+  transition: color 150ms;
+}
+
+.canais a:hover,
+.canais a:hover .icone {
+  color: var(--ambar);
+}
