@@ -1,0 +1,8 @@
+Os dois PDFs desta pasta são arquivos de exemplo.
+Substitua pelos seus currículos, mantendo os nomes:
+
+- curriculo-pt-br.pdf
+- resume-en.pdf
+
+Os links para eles ficam no hero da home (index.html), na página Sobre
+(sobre.html) e no rodapé de todas as páginas.
