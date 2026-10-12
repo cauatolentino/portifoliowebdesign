@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stack · Coloque nome</title>
+  <meta name="description" content="As tecnologias que uso e as práticas que aplico para desenvolver, investigar e evoluir aplicações.">
+  <meta property="og:title" content="Stack · Coloque nome">
+  <meta property="og:description" content="As tecnologias que uso e as práticas que aplico para desenvolver, investigar e evoluir aplicações.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400..800&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/stack.css">
+
+  <!-- Aplica o tema antes de desenhar a página. -->
+  <script src="js/tema.js"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__barra">
+      <a class="logo" href="index.html" aria-label="Ir para a página inicial"><span aria-hidden="true">~/</span>coloque.nome</a>
+
+      <div class="cabecalho__lado">
+        <nav class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="cases.html">Cases</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="stack.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Stack</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="cabecalho__acoes">
+          <div class="tema" role="group" aria-label="Tema">
+            <button class="tema__botao" type="button" data-definir-tema="claro" aria-label="Usar tema claro" title="Usar tema claro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+            <button class="tema__botao" type="button" data-definir-tema="escuro" aria-label="Usar tema escuro" title="Usar tema escuro">
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+          </div>
+          <a class="botao botao--primario cabecalho__cta" href="contato.html">Entre em contato</a>
+          <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+            <svg class="icone icone--abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+            <svg class="icone icone--fechar" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="menu-mobile" id="menu-mobile" aria-label="Navegação principal" hidden>
+      <ul class="container">
+        <li><a class="menu-mobile__link" href="index.html"><span class="nav__marca" aria-hidden="true">/</span>Home</a></li>
+        <li><a class="menu-mobile__link" href="projetos.html"><span class="nav__marca" aria-hidden="true">/</span>Projetos</a></li>
+        <li><a class="menu-mobile__link" href="cases.html"><span class="nav__marca" aria-hidden="true">/</span>Cases</a></li>
+        <li><a class="menu-mobile__link" href="sobre.html"><span class="nav__marca" aria-hidden="true">/</span>Sobre</a></li>
+        <li><a class="menu-mobile__link" href="stack.html" aria-current="page"><span class="nav__marca" aria-hidden="true">/</span>Stack</a></li>
+        <li><a class="menu-mobile__link" href="contato.html"><span class="nav__marca" aria-hidden="true">/</span>Contato</a></li>
+        <li class="menu-mobile__cta"><a class="botao botao--primario" href="contato.html">Entre em contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <header class="container pagina__cabecalho">
+      <h1 class="pagina__titulo">Stack, competências e práticas</h1>
+      <p class="pagina__subtitulo">As tecnologias que uso com autonomia, no trabalho, na faculdade e nos meus projetos, e as práticas que aplico para desenvolver, investigar e evoluir aplicações.</p>
+    </header>
+
+    <div class="container stack">
+      <section aria-labelledby="stack-1">
+        <div class="stack__cabecalho">
+          <p class="rotulo stack__numero">01</p>
+          <h2 class="stack__titulo" id="stack-1">Tecnologias e ferramentas</h2>
+          <p class="stack__descricao">Em cada grupo, liste primeiro o que você usa todo dia e depois o que usa nos estudos e nos projetos.</p>
+        </div>
+
+        <ul class="stack__grade">
+          <li data-revelar>
+            <article class="grupo grupo--ambar">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Linguagens</h3>
+                <span class="grupo__glifo" aria-hidden="true">{ }</span>
+              </div>
+              <p class="grupo__descricao">As linguagens com que você escreve código.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">HTML</li>
+                <li class="tag tag--mono">CSS</li>
+                <li class="tag tag--mono">JavaScript</li>
+                <li class="tag tag--mono">SQL</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.04">
+            <article class="grupo grupo--azul">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Front-end</h3>
+                <span class="grupo__glifo" aria-hidden="true">&lt;/&gt;</span>
+              </div>
+              <p class="grupo__descricao">O que você usa para construir interfaces.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">Flexbox</li>
+                <li class="tag tag--mono">Grid</li>
+                <li class="tag tag--mono">Design responsivo</li>
+                <li class="tag tag--mono">Acessibilidade</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.08">
+            <article class="grupo grupo--verde">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Back-end e APIs</h3>
+                <span class="grupo__glifo" aria-hidden="true">=&gt;</span>
+              </div>
+              <p class="grupo__descricao">Regras de negócio, integrações e serviços.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">APIs REST</li>
+                <li class="tag tag--mono">Node.js</li>
+                <li class="tag tag--mono">Coloque outra</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.12">
+            <article class="grupo grupo--violeta">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Banco de dados</h3>
+                <span class="grupo__glifo" aria-hidden="true">[ ]</span>
+              </div>
+              <p class="grupo__descricao">Onde os dados ficam e como você consulta.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">MySQL</li>
+                <li class="tag tag--mono">PostgreSQL</li>
+                <li class="tag tag--mono">Coloque outro</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.16">
+            <article class="grupo grupo--ambar">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Ambiente e versionamento</h3>
+                <span class="grupo__glifo" aria-hidden="true">&gt;_</span>
+              </div>
+              <p class="grupo__descricao">Ferramentas do dia a dia de desenvolvimento.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">Git</li>
+                <li class="tag tag--mono">GitHub</li>
+                <li class="tag tag--mono">VS Code</li>
+                <li class="tag tag--mono">Terminal</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.20">
+            <article class="grupo grupo--verde">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Testes e qualidade</h3>
+                <span class="grupo__glifo" aria-hidden="true">ok</span>
+              </div>
+              <p class="grupo__descricao">Como você confere que tudo funciona.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">Testes manuais</li>
+                <li class="tag tag--mono">Lighthouse</li>
+                <li class="tag tag--mono">Coloque outra</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="stack-2">
+        <div class="stack__cabecalho">
+          <p class="rotulo stack__numero">02</p>
+          <h2 class="stack__titulo" id="stack-2">Competências e práticas</h2>
+          <p class="stack__descricao">Como você desenvolve, investiga e evolui o que constrói no dia a dia.</p>
+        </div>
+
+        <ul class="stack__grade">
+          <li data-revelar>
+            <article class="grupo grupo--azul">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Desenvolver</h3>
+                <span class="grupo__glifo" aria-hidden="true">+</span>
+              </div>
+              <p class="grupo__descricao">Do rascunho à página pronta.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">HTML semântico</li>
+                <li class="tag tag--mono">CSS organizado</li>
+                <li class="tag tag--mono">Componentes reaproveitáveis</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.04">
+            <article class="grupo grupo--verde">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Investigar</h3>
+                <span class="grupo__glifo" aria-hidden="true">#</span>
+              </div>
+              <p class="grupo__descricao">Chegar à causa do problema antes de alterar o código.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">Depuração no navegador</li>
+                <li class="tag tag--mono">Leitura de documentação</li>
+                <li class="tag tag--mono">Reprodução de bugs</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.08">
+            <article class="grupo grupo--violeta">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Evoluir</h3>
+                <span class="grupo__glifo" aria-hidden="true">~&gt;</span>
+              </div>
+              <p class="grupo__descricao">Melhorar o que já existe, um ajuste por vez.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">Refatoração</li>
+                <li class="tag tag--mono">Desempenho</li>
+                <li class="tag tag--mono">Documentação</li>
+              </ul>
+            </article>
+          </li>
+          <li data-revelar data-atraso="0.12">
+            <article class="grupo grupo--ambar">
+              <div class="grupo__topo">
+                <h3 class="grupo__titulo">Colaborar</h3>
+                <span class="grupo__glifo" aria-hidden="true">&amp;</span>
+              </div>
+              <p class="grupo__descricao">Trabalho em time, com quem é da área e com quem não é.</p>
+              <ul class="tags">
+                <li class="tag tag--mono">Git em equipe</li>
+                <li class="tag tag--mono">Revisão de código</li>
+                <li class="tag tag--mono">Comunicação</li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <div class="rodape__grade">
+        <div>
+          <p class="rodape__nome">Coloque nome</p>
+          <p class="rodape__cargo">Coloque seu cargo</p>
+        </div>
+
+        <div class="rodape__colunas">
+          <div>
+            <h2 class="rotulo">Navegar</h2>
+            <ul>
+              <li><a href="projetos.html">Projetos</a></li>
+              <li><a href="cases.html">Cases</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="stack.html">Stack</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Currículos</h2>
+            <ul>
+              <li><a href="assets/curriculos/curriculo-pt-br.pdf" target="_blank" rel="noopener noreferrer">Português (BR)<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="assets/curriculos/resume-en.pdf" target="_blank" rel="noopener noreferrer" lang="en">English<span class="so-leitor" lang="pt-BR"> (abre em nova aba)</span></a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="rotulo">Contatos</h2>
+            <ul>
+              <li><a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">GitHub<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn<span class="so-leitor"> (abre em nova aba)</span></a></li>
+              <li><a href="mailto:seuemail@exemplo.com">E-mail</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="divisor"></div>
+      <p class="rodape__direitos">© <span id="ano">2026</span> Coloque nome</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js" defer></script>
+  <script src="js/rodape.js" defer></script>
+  <script src="js/revelar.js" defer></script>
+</body>
+</html>
