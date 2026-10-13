@@ -222,3 +222,29 @@ button {
   opacity: 1;
   transform: none;
 }
+
+/* ------------------------------ Acessibilidade ------------------------------ */
+
+/* Modo de alto contraste do sistema: usa a cor de destaque do próprio sistema. */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid Highlight;
+  }
+}
+
+/* Quem pede menos movimento não recebe animações nem rolagem suave. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
